@@ -3,9 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const ThemeContext = React.createContext()  // ThemeContext.Provider & ThemeContext.Consumer
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeContext.Provider value={"light"}>
+        <App />
+    </ThemeContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
