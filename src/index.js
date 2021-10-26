@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-const ThemeContext = React.createContext()  // ThemeContext.Provider & ThemeContext.Consumer
+import ThemeContext from "./themeContext"
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeContext.Provider value={"light"}>
+    <ThemeContext.Provider value={"dark"}>
         <App />
     </ThemeContext.Provider>
   </React.StrictMode>,
